@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Healthy Eating.html">Healthy eating</a></li>
+                <li><a href="Sleeping Habits.html">Sleeping Habits</a></li>
+                <li><a href="Exercise.html">Exercise</a></li>
+                <li><a href="other Topics.html">Other Topics</a></li>
+                <li><a class="active" href="Gallery.html">Gallery</a></li>
+                <li><a href="football.html">Football</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        
+        <div class="content">
+            <h2>Gallery.</h2>
+            <div class="photoGallery" style="max-width:80%">
+                <img class="mySlides" src="images/exercise.jfif" style="width:100%">
+                <img class="mySlides" src="images/1.webp" style="width:100%">
+                <img class="mySlides" src="images/sleep-hygiene-hub.jpg" style="width:100%">
+                <img class="mySlides" src="images/football-1200x1600.jpg" style="width:100%">
+                <img class="mySlides" src="images/HEPJan2015.webp" style="width:100%">
+
+
+                <div class="leftButton" onclick="plusDivs(-1)">
+                    <img src="images/leftArrow.png" alt="left arrow">
+                </div>
+                <div class="rightButton" onclick="plusDivs(1)">
+                    <img src="images/nextArrow.png" alt="right arrow">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1; 
+        showDivs(slideIndex); 
+
+        
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        n
+        function showDivs(n) {
+            var i; 
+            var x = document.getElementsByClassName("mySlides"); 
+            
+            if (n > x.length) {slideIndex = 1}
+
+            
+            if (n < 1) {slideIndex = x.length;}
+
+            
+            
+            for (i = 0; i < x.length; i++) 
+            {
+                x[i].style.display = "none"; 
+            }
+            x[slideIndex - 1].style.display = "block"; 
+        }
+    </script>
+</body>
+</html>
