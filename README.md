@@ -1,2 +1,2 @@
-# solihullwebsite
-a site for solihull made with HTML and css
+# A solihull website
+a site for solihull made with HTML and CSS
